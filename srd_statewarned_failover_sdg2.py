@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*- 
 import sdg_conn
 import time
-SDG1 = "107.239.97.194"
-SDG2 = "107.239.97.202"
+SDG1 = ""###############ENTER SDG1 IP##################
+SDG2 = ""###############ENTER SDG2 IP##################
 
 print("Verify SRd state Standby (Warned) by triggering redundancy events specified under WARNEV policy  on standby SDG")
 #############Connecting to SDG################
 print("Connecting to SDG...")
-sdg_conn.conn_open(SDG2, "pv111p", "pv111p")
+sdg_conn.conn_open(SDG2, UNAME, PWD)###############Enter Username and Password##################
 sdg_conn.redundancy_status()
 print ("#######Waiting for Mastership#######")
 local_peer_status = sdg_conn.mastership()
